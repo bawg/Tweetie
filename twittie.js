@@ -18,7 +18,7 @@
             'hideReplies': false,
             'dateFormat': '%b/%d/%Y',
             'template': '{{date}} - {{tweet}}',
-            'apiPath' : 'http://files.sonnyt.com/tweetie/tweet.php'
+            'apiPath' : 'https://github.com/bawg/Tweetie/blob/master/api/tweet.php'
         }, options);
 
         if (settings.list && !settings.username) {
