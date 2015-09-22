@@ -1,8 +1,8 @@
 (function ($) {
     'use strict';
-    window.alert("test1");
+    window.alert("test5");
     $.fn.twittie = function () {
-       
+    window.alert("test4");
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
             callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
 
@@ -21,6 +21,7 @@
             $.error('If you want to fetch tweets from a list, you must define the username of the list owner.');
         }
 
+        window.alert("test6");
         var linking = function (tweet) {
             window.alert("test3");
             var twit = tweet.replace(/(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/ig,'<a href="$1" target="_blank" title="Visit this link">$1</a>')
