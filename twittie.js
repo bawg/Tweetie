@@ -2,7 +2,6 @@
     'use strict';
     window.alert("test5");
     $.fn.twittie = function () {
-    window.alert("test4");
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
             callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
 
@@ -21,9 +20,8 @@
             $.error('If you want to fetch tweets from a list, you must define the username of the list owner.');
         }
 
-        window.alert("test6");
+        
         var linking = function (tweet) {
-            window.alert("test3");
             var twit = tweet.replace(/(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/ig,'<a href="$1" target="_blank" title="Visit this link">$1</a>')
                  .replace(/#([a-zA-Z0-9_]+)/g,'<a href="http://twitter.com/search?q=%23$1&amp;src=hash" target="_blank" title="Search for #$1">#$1</a>')
                  .replace(/@([a-zA-Z0-9_]+)/g,'<a href="http://twitter.com/$1" target="_blank" title="$1 on Twitter">@$1</a>');
@@ -37,7 +35,7 @@
          */
         var dating = function (twt_date) {
             // fix for IE
-            window.alert("test4");
+            
             var time = twt_date.split(' ');
             twt_date = new Date(Date.parse(time[1] + ' ' + time[2] + ', ' + time[5] + ' ' + time[3] + ' UTC'));
 
@@ -85,10 +83,10 @@
 
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
-            window.alert("test3");
+            
             that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
-                window.alert("test5");
+                
                 for (var i = 0; i < settings.count; i++) {
                     if (twt[i]) {
                         var temp_data = {
