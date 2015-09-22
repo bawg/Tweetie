@@ -1,6 +1,6 @@
 (function ($) {
     'use strict';
-    window.alert("test3");
+    window.alert("test1");
     $.fn.twittie = function () {
        
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
@@ -21,19 +21,11 @@
             $.error('If you want to fetch tweets from a list, you must define the username of the list owner.');
         }
 
-        /**
-         * Applies @reply, #hash and http links
-         * @param  {String} tweet A single tweet
-         * @return {String}       Fixed tweet
-         *
-         * Thanks to @Wachem enhanced linking.
-         */
         var linking = function (tweet) {
             window.alert("test3");
             var twit = tweet.replace(/(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/ig,'<a href="$1" target="_blank" title="Visit this link">$1</a>')
                  .replace(/#([a-zA-Z0-9_]+)/g,'<a href="http://twitter.com/search?q=%23$1&amp;src=hash" target="_blank" title="Search for #$1">#$1</a>')
                  .replace(/@([a-zA-Z0-9_]+)/g,'<a href="http://twitter.com/$1" target="_blank" title="$1 on Twitter">@$1</a>');
-
             return twit;
         };
 
