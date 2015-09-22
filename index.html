@@ -171,6 +171,7 @@
     </div>
 
     <script class="source" type="text/javascript">
+        $('.tweet').twittie();
         $('.example1 .tweet').twittie({
             dateFormat: '%b. %d, %Y',
             template: '{{tweet}} <div class="date">{{date}}</div> <a href="{{url}}" target="_blank">Details</a>',
@@ -186,7 +187,7 @@
     </div>
 
     <script class="source2" type="text/javascript">
-        alert("I am an alert box!");
+        alert("Tag#2");
         $('.tweet').twittie();
         $('.example2 .tweet').twittie({
             username: 'paul_irish',
@@ -209,22 +210,7 @@
         <strong>If you like the plugin</strong> <br /><script data-gittip-username="sonnyt" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
     </div>
 
-    <a href="https://github.com/sonnyt/Tweetie" class="btn">Fork me</a>
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21599784-2']);
-        _gaq.push(['_setDomainName', 'sonnyt.com']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-
+    
+    
 </body>
 </html>
