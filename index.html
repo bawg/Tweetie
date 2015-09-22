@@ -165,12 +165,15 @@
     <script type="text/javascript" src="twittie.js"></script>
 </head>
 <body>
+
     <div class="example1">
         <div class="tweet"></div>
         <div class="button"></div>
     </div>
 
     <script class="source" type="text/javascript">
+        alert("Tag#1");
+        alert(example1);
         $('.tweet').twittie();
         $('.example1 .tweet').twittie({
             dateFormat: '%b. %d, %Y',
@@ -180,14 +183,12 @@
         });
     </script>
 
-
-
     <div class="example2">
         <div class="tweet"></div>
     </div>
 
     <script class="source2" type="text/javascript">
-        alert("Tag#2");
+    
         $('.tweet').twittie();
         $('.example2 .tweet').twittie({
             username: 'paul_irish',
@@ -206,10 +207,7 @@
         });
     </script>
     
-    <div class="tip">
-        <strong>If you like the plugin</strong> <br /><script data-gittip-username="sonnyt" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
-    </div>
-
+   
     
     
 </body>
