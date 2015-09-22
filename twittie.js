@@ -2,6 +2,7 @@
     'use strict';
 
     $.fn.twittie = function () {
+        window.alert("test1");
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
             callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
 
@@ -91,7 +92,7 @@
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
             that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
-
+                window.alert("test2");
                 for (var i = 0; i < settings.count; i++) {
                     if (twt[i]) {
                         var temp_data = {
