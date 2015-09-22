@@ -1,6 +1,6 @@
 (function ($) {
     'use strict';
-    window.alert("test2");
+    window.alert("test3");
     $.fn.twittie = function () {
        
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
@@ -44,6 +44,7 @@
          */
         var dating = function (twt_date) {
             // fix for IE
+            window.alert("test4");
             var time = twt_date.split(' ');
             twt_date = new Date(Date.parse(time[1] + ' ' + time[2] + ', ' + time[5] + ' ' + time[3] + ' UTC'));
 
@@ -91,9 +92,10 @@
 
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
+            window.alert("test3");
             that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
-                window.alert("test2");
+                window.alert("test5");
                 for (var i = 0; i < settings.count; i++) {
                     if (twt[i]) {
                         var temp_data = {
