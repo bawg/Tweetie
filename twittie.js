@@ -79,7 +79,8 @@
 
         var that = this;
 
-   window.alert(settings.apiPath);
+   //window.alert(settings.apiPath);
+   windows.alert(username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies);
 
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
