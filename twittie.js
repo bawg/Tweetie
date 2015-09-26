@@ -18,8 +18,7 @@
 
         if (settings.list && !settings.username) {
             $.error('If you want to fetch tweets from a list, you must define the username of the list owner.');
-        }
-    window.alert("test6");        
+        }       
         var linking = function (tweet) {
             var twit = tweet.replace(/(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/ig,'<a href="$1" target="_blank" title="Visit this link">$1</a>')
                  .replace(/#([a-zA-Z0-9_]+)/g,'<a href="http://twitter.com/search?q=%23$1&amp;src=hash" target="_blank" title="Search for #$1">#$1</a>')
@@ -83,8 +82,7 @@
 
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
-            
-            that.find('span').fadeOut('fast', function () {
+               window.alert("test6");             that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
                 
                 for (var i = 0; i < settings.count; i++) {
