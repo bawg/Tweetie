@@ -2,6 +2,11 @@
     require_once("twitteroauth/twitteroauth.php"); // Path to twitteroauth library
     require_once('config.php'); // Path to config file
 
+function alert($string)
+{
+    echo '<script type="text/javascript">alert("' . $string . '");</script>';
+}
+
     // Check if keys are in place
     if (CONSUMER_KEY === '' || CONSUMER_SECRET === '' || CONSUMER_KEY === 'CONSUMER_KEY_HERE' || CONSUMER_SECRET === 'CONSUMER_SECRET_HERE') {
         echo 'You need a consumer key and secret keys. Get one from <a href="https://dev.twitter.com/apps">dev.twitter.com/apps</a>';
