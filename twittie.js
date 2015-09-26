@@ -1,6 +1,5 @@
 (function ($) {
     'use strict';
-    window.alert("test5");
     $.fn.twittie = function () {
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
             callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
@@ -80,12 +79,14 @@
 
         var that = this;
 
+   window.alert(settings.apiPath);
+
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
-               window.alert("test6");             that.find('span').fadeOut('fast', function () {
+                        that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
-                
-                for (var i = 0; i < settings.count; i++) {
+
+                   window.alert("test5");                for (var i = 0; i < settings.count; i++) {
                     if (twt[i]) {
                         var temp_data = {
                             date: dating(twt[i].created_at),
