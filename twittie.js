@@ -4,6 +4,14 @@
         var options = (arguments[0] instanceof Object) ? arguments[0] : {},
             callback = (typeof arguments[0] === 'function') ? arguments[0] : arguments[1];
 
+
+//delete after test
+
+<?php
+echo "Hello World!";
+?>
+
+
         // Default settings
         var settings = $.extend({
             'username': null,
