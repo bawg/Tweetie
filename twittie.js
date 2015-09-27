@@ -82,9 +82,10 @@
         var that = this;
 
    window.alert(settings.apiPath);
-   //$.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
+   //windows.alert(username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies);
 
-       $.getJSON(www.google.com, {'hello'}, function (twt) {
+        // Fetch tweets
+        $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
                         that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
 
