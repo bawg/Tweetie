@@ -79,15 +79,15 @@
 
         var that = this;
 
-   //window.alert(settings.apiPath);
-   windows.alert(username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies);
+   window.alert(settings.apiPath);
+   //windows.alert(username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies);
 
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
                         that.find('span').fadeOut('fast', function () {
                 that.html('<ul></ul>');
 
-                   window.alert("test5");                for (var i = 0; i < settings.count; i++) {
+      for (var i = 0; i < settings.count; i++) {
                     if (twt[i]) {
                         var temp_data = {
                             date: dating(twt[i].created_at),
